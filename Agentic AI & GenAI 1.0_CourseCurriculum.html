@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI & GenAI 1.0 Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8fafc;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 60px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 6px 40px rgba(25, 70, 150, 0.10);
+        }
+
+        .header {
+            border-bottom: 4px solid #2383e2;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .header h1 {
+            background: linear-gradient(90deg, #0d47a1 60%, #03a9f4 100%);
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            display: inline-block;
+            padding: 10px 28px 7px 18px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(10, 90, 200, 0.06);
+        }
+
+        .header .subtitle {
+            color: #1976d2;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 11px;
+        }
+
+        .header .tagline {
+            color: #0097a7;
+            font-size: 14px;
+            font-style: italic;
+            max-width: 700px;
+            background: #f1f8e9;
+            border-radius: 5px;
+            padding: 4px 10px 4px 6px;
+            display: inline-block;
+        }
+
+        .section {
+            margin-bottom: 32px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            background: #f5fcff;
+            border-radius: 10px;
+            padding: 20px 26px 16px 18px;
+            box-shadow: 0 2px 7px rgba(50, 180, 255, 0.04);
+        }
+
+        .section-title {
+            color: #1976d2;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, #1976d2 70%, #43e97b 120%);
+            color: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 7px;
+        }
+
+        .section-content {
+            color: #375567;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-top: 7px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(90deg,#fffde7 70%, #ffe082 100%);
+            border-left: 8px solid #ffb300;
+            color: #3e2723;
+            padding: 18px 22px 15px 24px;
+            margin: 24px 0;
+            border-radius: 10px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            box-shadow: 0 2px 4px rgba(255,193,7,0.13);
+        }
+        .highlight-box .title {
+            color: #ff7043;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+            margin: 19px 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .column-box {
+            background: linear-gradient(120deg,#e3f2fd 30%, #fce4ec 200%);
+            padding: 18px;
+            border-radius: 7px;
+            border: 1.5px solid #81d4fa;
+            box-shadow: 0 1px 6px rgba(3, 169, 244, 0.07);
+        }
+        .column-box .box-title {
+            color: #1a365d;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .column-box ul {
+            margin-left: 18px;
+            font-size: 12.5px;
+            color: #34495e;
+        }
+        .column-box li {
+            margin-bottom: 6px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 28px 0;
+            padding: 20px;
+            background: linear-gradient(90deg, #1976d2ee 0%, #1de9b6cc 120%);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(25,118,210,0.12);
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .stat-item {
+            text-align: center;
+            color: #fff;
+            flex: 1;
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+            color: #ffeb3b;
+            text-shadow: 0 2px 6px #00968899;
+        }
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.86;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-section {
+            background: linear-gradient(90deg, #1976d2, #43e97b 120%);
+            color: white;
+            padding: 27px;
+            margin-top: 34px;
+            border-radius: 13px;
+            text-align: center;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            box-shadow: 0 2px 19px rgba(67, 233, 123, 0.15);
+        }
+        .cta-section h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .cta-section p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            opacity: 0.96;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 13px;
+            margin: 15px 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .expertise-item {
+            background: #fff;
+            border: 1.5px solid #1de9b6;
+            padding: 13px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1976d2;
+            border-radius: 6px;
+            box-shadow: 0 1px 6px #4dd0e144;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin: 20px 0;
+        }
+
+        .module-card {
+            background: #fff;
+            border: 2px solid #1de9b6;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(29, 233, 182, 0.1);
+        }
+
+        .module-number {
+            background: #1976d2;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .module-title {
+            color: #1976d2;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .module-topics {
+            font-size: 12px;
+            color: #546e7a;
+            line-height: 1.5;
+        }
+
+        .divider {
+            height: 2.3px;
+            background: linear-gradient(to right, #e1e8ed 0%, #1de9b6 50%, #1976d2 100%);
+            margin: 25px 0;
+            border-radius: 1px;
+        }
+
+        .checkmark {
+            color: #43e97b;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        @media print {
+            .container, .section, .header, .highlight-box, .stats, .cta-section, .two-column, .expertise-grid, .modules-grid {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            body {
+                margin: 0;
+            }
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Agentic AI & GenAI 1.0</h1>
+            <div class="subtitle">Master AI Agent Frameworks, Multi-Agent Systems & AI-Powered Automation</div>
+            <div class="tagline">Comprehensive training for building, deploying, and managing AI agents at scale</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Who Should Enroll</div>
+            <div class="section-content">
+                This course is designed for a diverse range of professionals including AI developers, machine learning engineers, data scientists, software engineers, business analysts, solution architects, QA testers, and aspirational graduates seeking to transition into AI. It's also ideal for professionals from non-IT industries looking to leverage AI automation in their domains. Whether you are new to AI agents or have experience in NLP and GenAI, this course will equip you with the knowledge and hands-on skills required to develop, deploy, and manage AI agents at scale. The curriculum accommodates both technical practitioners and those in advisory, design, and analytical roles.
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">19</span>
+                <span class="stat-label">Comprehensive Modules</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2-3</span>
+                <span class="stat-label">Months Duration</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Hours/Week</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Real-World Projects</span>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <div class="title">🎯 Learning Objectives</div>
+            <div class="section-content">
+                <span class="checkmark">✅</span> Master AI Agent Frameworks: LangChain, LangGraph, CrewAI, LangFlow<br>
+                <span class="checkmark">✅</span> Develop Multi-Agent Systems for real-world collaborative tasks<br>
+                <span class="checkmark">✅</span> Implement RAG & Adaptive RAG with vector databases<br>
+                <span class="checkmark">✅</span> Automate Workflows using n8n & LangFlow<br>
+                <span class="checkmark">✅</span> Deploy AI Agents at Scale with GitHub Actions, Docker, AWS<br>
+                <span class="checkmark">✅</span> Monitor & Optimize with LangSmith<br>
+                <span class="checkmark">✅</span> Build chatbots, agents, Advanced Agentic AI agents
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Prerequisites & Requirements</div>
+            <div class="two-column">
+                <div class="column-box">
+                    <div class="box-title">Technical Foundation</div>
+                    <ul>
+                        <li>Foundational Python programming skills</li>                        
+                    </ul>
+                </div>
+                <div class="column-box">
+                    <div class="box-title">Time Commitment</div>
+                    <ul>
+                        <li>2-3 months structured learning path</li>
+                        <li>5 hours per week time investment</li>
+                        <li>Hands-on coding exercises</li>
+                        <li>Real-world project work</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-title">Core Technologies & Frameworks</div>
+            <div class="expertise-grid">
+                <div class="expertise-item">LangChain</div>
+                <div class="expertise-item">LangGraph</div>
+                <div class="expertise-item">CrewAI</div>                
+                <div class="expertise-item">LangFlow</div>
+                <div class="expertise-item">n8n</div>
+                <div class="expertise-item">Pydantic</div>
+                <div class="expertise-item">FastAPI</div>
+                <div class="expertise-item">Streamlit</div>
+                <div class="expertise-item">FAISS</div>
+                <div class="expertise-item">ChromaDB</div>
+                <div class="expertise-item">LangSmith</div>                
+                <div class="expertise-item">Docker</div>
+                <div class="expertise-item">AWS Services</div>
+                <div class="expertise-item">GitHub</div>
+                <div class="expertise-item">GitHub Actions</div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-title">Course Curriculum - 19 Modules</div>
+            <div class="modules-grid">
+             <div class="module-card">
+                    <div class="module-number">MODULE 1</div>
+                    <div class="module-title">Introduction to Agents</div>
+                    <div class="module-topics">Understanding Agents, Agentic AI vs AI Agents, Multi-Agent Systems & Frameworks</div>
+                </div>
+            <div class="module-card">                    
+                    <div class="module-number">MODULE 2</div>
+                    <div class="module-title">Python Essentials(Quick Refresh)</div>
+                    <div class="module-topics">Python Essentials for Agentic AI (Quick Refresh), </div>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">MODULE 3</div>
+                    <div class="module-title">NLP Fundamentals</div>
+                    <div class="module-topics">NLP Fundamentals (Tokenization, Embeddings, Text Classification, Named Entity Recognition), Introduction to Transformers and LLMs</div>
+                </div>              
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 4</div>
+                    <div class="module-title">Pydantic - Data Validation</div>
+                    <div class="module-topics">Models & Fields, Core Validation, JSON handling, Advanced Validation with Logfire</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 5</div>
+                    <div class="module-title">LangChain</div>
+                    <div class="module-topics">Components & Modules, Data Ingestion, Text Splitting, Embeddings, Vector Stores (FAISS, ChromaDB)</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 6</div>
+                    <div class="module-title">LCEL (LangChain Expression Language)</div>
+                    <div class="module-topics">Groq API, Building LLM Chains, Structured Output, Deploy with Langserve</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 7</div>
+                    <div class="module-title">LangGraph Introduction</div>
+                    <div class="module-topics">Simple Graphs, LangGraph Studio, Chains, Routers, Agents with Memory, Deployment</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 8</div>
+                    <div class="module-title">State & Memory in LangGraph</div>
+                    <div class="module-topics">State Schemas, Multiple Schemas, State Reducers, Message Filtering</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 9</div>
+                    <div class="module-title">UX and Human in Loop</div>
+                    <div class="module-topics">Streaming, Breakpoints, Editing State, Human Feedback, Time Travel Debugging</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 10</div>
+                    <div class="module-title">LangGraph Deployments</div>
+                    <div class="module-topics">Deployment Concepts, Creating Deployments, Connecting to Deployments</div>
+                </div>               
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 11</div>
+                    <div class="module-title">Agentic RAG</div>
+                    <div class="module-topics">Adaptive RAG with Cohere, Agentic RAG, C-RAG, Self RAG with VectorDB</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 12</div>
+                    <div class="module-title">LangSmith</div>
+                    <div class="module-topics">Key Features, AI Development Workflow, User Interface, Data Integration & Preprocessing</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 13</div>
+                    <div class="module-title">Multi-Agent Systems with LangGraph</div>
+                    <div class="module-topics">Building Agent Nodes, Defining Roles, Communication Protocols, Scalable Systems</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 14</div>
+                    <div class="module-title">CrewAI - Multi-Agent Platform</div>
+                    <div class="module-topics">Crew Collaboration, Agent Communication, Workflow Automation, Memory & Tools, LangChain Integration</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 15</div>
+                    <div class="module-title">LangFlow - Low Code Tool</div>
+                    <div class="module-topics">Overview & Use Cases, Setup & UI Navigation, Nodes, Chains, Prompts, First Application</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 16</div>
+                    <div class="module-title">Building Blocks of LangFlow</div>
+                    <div class="module-topics">Nodes & Chains, LLM Integration, Pre-built vs Custom Workflows, Prompt Engineering</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 17</div>
+                    <div class="module-title">Integrating LangFlow</div>
+                    <div class="module-topics">Data Sources (SQL, CSV, NoSQL), REST APIs, Vector Databases, OpenAI & Hugging Face, Chatbots</div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 18</div>
+                    <div class="module-title">n8n Workflow Automation</div>
+                    <div class="module-topics">Workflows & Nodes, APIs & Webhooks, AI Agent Chatbot, RAG, Blog Generation, Transcription</div>
+                </div>                
+
+                <div class="module-card">
+                    <div class="module-number">MODULE 19</div>
+                    <div class="module-title">Deployment & Projects</div>
+                    <div class="module-topics">GitHub Actions, Docker, AWS (S3, ECR, EC2, Bedrock), BentoML, End-to-End Agentic AI Projects</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <div class="title">🏆 Meet Your Instructors</div>
+            <div class="section-content">
+                <strong>Anji</strong> - I bring a rare combination that most AI instructors cannot offer: 20+ years of enterprise-scale implementation experience merged with cutting-edge expertise in Generative AI and Agentic AI systems. My curriculum doesn't just teach theory—it prepares professionals for real-world deployment challenges, security considerations, and business value creation that enterprises demand today.
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Transform Your AI Career Today</h3>
+            <p>Master the most in-demand skills in agentic AI and multi-agent systems. Build real-world applications, deploy at scale, and become an AI automation expert.</p>
+            <p style="margin-top: 15px; font-weight: 600;">Ready to begin your journey?</p>            
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; padding-top: 20px; border-top: 2px solid rgba(255,255,255,0.3);">
+    <div style="text-align: center;">
+        <div style="font-size: 12px; opacity: 0.9; margin-bottom: 4px;">Contact Person</div>
+        <div style="font-size: 15px; font-weight: 700;">Bapuji</div>
+    </div>
+    <div style="text-align: center;">
+        <div style="font-size: 12px; opacity: 0.9; margin-bottom: 4px;">Phone</div>
+        <div style="font-size: 15px; font-weight: 700;">+91 97019 56243</div>
+    </div>
+    <div style="text-align: center;">
+        <div style="font-size: 12px; opacity: 0.9; margin-bottom: 4px;">WhatsApp</div>
+        <div style="font-size: 15px; font-weight: 700;">+91 97019 56243</div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
